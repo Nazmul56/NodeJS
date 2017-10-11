@@ -1,0 +1,27 @@
+{
+  "isDev": false,
+  "server": {
+    "port": 83,
+    "/* secure */": "/* whether this connects via https */",
+    "secure": true,
+    "key": "config/sslcerts/key.pem",
+    "cert": "config/sslcerts/cert.pem",
+    "password": null
+  },
+  "rooms": {
+    "/* maxClients */": "/* maximum number of clients per room. 0 = no limit */",
+    "maxClients": 0
+  },
+  "stunservers": [
+    {
+      "urls": "stun:turn.durbintest.pro:3478"
+    }
+  ],
+  "turnservers": [
+    {
+      "urls": ["turn:turn.durbintest.pro:3478"],
+      "secret": "rtcwebarmy19",
+      "expiry": 86400
+    }
+  ]
+}

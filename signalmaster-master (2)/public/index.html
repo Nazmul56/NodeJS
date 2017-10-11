@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Socket.IO Authentication Example</title>
+</head>
+<body>
+
+
+  <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
+  <!--script src="/main.js"></script<!--var hash = md5("sreejesh@kriyatma");-->
+	<script>
+	var socket = socketIO.connect('http://localhost:8888/');
+	//var myAuthToken = "sreejesh@kriyatma";
+	
+		
+	//var encrypted = md5(myAuthToken);
+	socket.on('connect', function(){
+  	socket.emit('authenticate', {token: myAuthToken});
+	});
+
+	</script>
+</body>
+</html>
